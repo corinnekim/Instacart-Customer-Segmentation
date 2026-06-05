@@ -1,0 +1,4 @@
+,median,q1,q3,p95,max
+orders_per_user,10.0,6.0,20.0,51.0,100.0
+basket_size,8.0,5.0,14.0,25.0,145.0
+days_since_prior,8.0,5.0,15.0,30.0,30.0

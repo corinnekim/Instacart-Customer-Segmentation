@@ -1,0 +1,8 @@
+metric,value
+n_users,179319.0
+mean_pp,18.361
+median_pp,17.508
+std_pp,16.574
+share_flat_<5pp,0.131
+share_strong_>20pp,0.435
+share_negative,0.111

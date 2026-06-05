@@ -1,0 +1,20 @@
+# 데이터
+data/
+*.parquet
+
+# 노트북
+*.ipynb
+.ipynb_checkpoints/
+
+# OS / 파이썬
+.DS_Store
+Icon?
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 기타
+.claude/
+CLAUDE.md
+notes.md

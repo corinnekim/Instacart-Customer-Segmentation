@@ -1,0 +1,5 @@
+,coef,odds_ratio_per_1sd,or_ci_low,or_ci_high,p_value
+pos,-0.45642,0.63355,0.63158,0.63552,0.0
+order_size,0.02251,1.02277,1.01964,1.02591,0.0
+order_number,0.67319,1.96048,1.95206,1.96894,0.0
+days_since_prior_order,-0.09815,0.90652,0.90367,0.90937,0.0
