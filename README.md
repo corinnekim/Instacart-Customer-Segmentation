@@ -85,6 +85,7 @@ python -m eda.exploration_character
 
 - Instacart. (2017). The Instacart online grocery shopping dataset 2017 [Data set]. Kaggle. https://www.kaggle.com/datasets/psparks/instacart-market-basket-analysis
 - Iyengar, S. S., & Lepper, M. R. (2000). When choice is demotivating: Can one desire too much of a good thing? Journal of Personality and Social Psychology, 79(6), 995-1006. https://faculty.washington.edu/jdb/345/345%20Articles/Iyengar%20%26%20Lepper%20%282000%29.pdf
-- Kaufman, L., & Rousseeuw, P. J. (1990). Finding groups in data: An introduction to cluster analysis. John Wiley & Sons. https://doi.org/10.1002/9780470316801
+- Kaufman, L., & Rousseeuw, P. J. (1990). Finding groups in data: An introduction to cluster analysis. John Wiley & Sons.
+- Rousseeuw, P. J. (1987). Silhouettes: A graphical aid to the interpretation and validation of cluster analysis. Journal of Computational and Applied Mathematics, 20, 53-65. https://doi.org/10.1016/0377-0427(87)90125-7
 - Yulisasih, B. N., Herman, Sunardi, & Yuliansyah, H. (2024). Evaluation of K-Means clustering using silhouette score method on customer segmentation. ILKOM Jurnal Ilmiah, 16(3), 330-342. https://doi.org/10.33096/ilkom.v16i3.2325.330-342
 - 배수현. (2023). 컬리 충성고객 다잡은 '뷰티컬리'…이제 몸집 키운다. 테크M. https://www.techm.kr/news/articleView.html?idxno=121020
