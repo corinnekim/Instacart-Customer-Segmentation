@@ -1,6 +1,6 @@
 # Instacart 장바구니 순서로 읽는 고객 세그멘테이션과 추천 전략
 
-장바구니에 담는 순서를 행동 신호로 보고, 고객을 세분화해 집단별 추천 전략을 설계한 데이터 분석 프로젝트.
+장바구니에 담는 순서를 행동 신호로 보고, 고객을 세분화해 집단별 추천 전략을 설계한 데이터 분석 프로젝트
 
 **전체 리포트:** [Notion 포트폴리오](https://sweltering-crane-02b.notion.site/Instacart-7d596d4e0a49827cb37d015c80fe11f8)
 
@@ -12,7 +12,7 @@
 
 - 담는 순서에는 신호가 있다. 앞에 담은 상품일수록 **재구매 확률**이 높고(약 79%에서 48%로 하락), 주문 수와 장바구니 크기를 통제해도 패턴이 남는다.
 - (고객, 상품)별 **필수도 점수**를 XGBoost로 매겼다(AUC 0.82). 장바구니 앞에서 뒤로 갈수록 평균 필수도가 0.74에서 0.51로 낮아진다.
-- 자연 군집은 없었다(DBSCAN, 실루엣 0.34). 탐색 성향과 활동량으로 4개 운영 세그먼트를 나눴다. 집단별 정착률이 26~50%로 차이가 뚜렷했다.
+- 뚜렷한 자연 군집은 없었다(DBSCAN; 실루엣 0.34, 표준상 '약한 구조'). 고객 세그멘테이션에서 약한 구조는 흔해, 탐색 성향과 활동량 두 축으로 4개 운영 세그먼트를 나눴다. 집단별 정착률이 26~50%로 차이가 뚜렷했다.
 - 새 상품의 정착은 고객의 재구매 습관과 상품 자체가 좌우하고, 담은 위치와는 무관하다. 정착 예측 점수 상위 10%는 66%, 하위 10%는 15%가 다시 구매됐다.
 
 ## 분석 흐름
@@ -76,7 +76,8 @@ python -m eda.exploration_character
 
 ## 한계
 
-- 데이터에 가격이 없어 가치를 정착 상품 수로만 본다. 매출이나 이익으로는 환산하지 않았다.
+- 데이터에 가격이 없어 기회 크기를 정착 상품 수로만 보았고, 매출이나 이익으로는 환산하지 않았다.
+- 자연 군집이 없던 것은 이 데이터의 피처와 거리 기반 방법에 한정된 결과이다. 실루엣 0.34는 '약한 구조'지만 그것만으로 군집이 없다고 단정할 수는 없다. 고객 세그멘테이션에서 약한 구조는 흔하므로, 중요한 두 축으로 운영 세그먼트를 나눴다.
 - 패턴을 관찰한 것이지 추천을 실제로 적용한 효과를 증명한 것은 아니다. 효과는 A/B 테스트로 확인해야 한다.
 - 정착 예측 정확도는 보통 수준(AUC 0.68)이다. 정착 여부를 정확히 맞히기보다, 정착 가능성이 높은 순서로 줄을 세워 점수 높은 상품을 추천하는 데 쓴다.
 
@@ -84,4 +85,6 @@ python -m eda.exploration_character
 
 - Instacart. (2017). The Instacart online grocery shopping dataset 2017 [Data set]. Kaggle. https://www.kaggle.com/datasets/psparks/instacart-market-basket-analysis
 - Iyengar, S. S., & Lepper, M. R. (2000). When choice is demotivating: Can one desire too much of a good thing? Journal of Personality and Social Psychology, 79(6), 995-1006. https://faculty.washington.edu/jdb/345/345%20Articles/Iyengar%20%26%20Lepper%20%282000%29.pdf
+- Kaufman, L., & Rousseeuw, P. J. (1990). Finding groups in data: An introduction to cluster analysis. John Wiley & Sons. https://doi.org/10.1002/9780470316801
+- Yulisasih, B. N., Herman, Sunardi, & Yuliansyah, H. (2024). Evaluation of K-Means clustering using silhouette score method on customer segmentation. ILKOM Jurnal Ilmiah, 16(3), 330-342. https://doi.org/10.33096/ilkom.v16i3.2325.330-342
 - 배수현. (2023). 컬리 충성고객 다잡은 '뷰티컬리'…이제 몸집 키운다. 테크M. https://www.techm.kr/news/articleView.html?idxno=121020
